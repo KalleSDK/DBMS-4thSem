@@ -59,7 +59,7 @@ commit;
 
 /* Question 1 */
 
-select * from author right join catalog on author.AuthorID=catalog.AuthorID where year > 2000;
+select * from author right join catalog on author.AuthorID=catalog.AuthorID where year > 2000 group by catalog.AuthorID having count(*)>2;
 
 /* Question 2 */
 
